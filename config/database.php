@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => 'landlord',
 
     /*
     |--------------------------------------------------------------------------
@@ -30,6 +30,22 @@ return [
     */
 
     'connections' => [
+
+        'landlord' => [
+            'driver' => 'mysql',
+            'database' => 'multi_landlord',
+            'host' => '127.0.0.1',
+            'username' => 'root',
+            'password' => '',
+        ],
+
+        'tenant' => [
+            'driver' => 'mysql',
+            'database' => null,
+            'host' => '127.0.0.1',
+            'username' => 'root',
+            'password' => '',
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',

@@ -23,10 +23,11 @@ class DatabaseSeeder extends Seeder
 
     protected function runTenantSpecificSeeders()
     {
+        new UserSeeder()->run();
     }
 
     protected function runLandlordSpecificSeeders()
     {
-        (new TenantSeeder())->run();
+        new TenantSeeder()->run();
     }
 }

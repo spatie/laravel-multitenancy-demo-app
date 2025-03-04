@@ -12,4 +12,8 @@
     <div>
         Retrieved from the <b>{{ (new User)->getConnection()->getDatabaseName() }}</b> database
     </div>
+    <div class="mt-4 text-sm">
+        <a class="underline" href="/dispatch">Dispatch job</a>
+
+    </div>
 </x-app-layout>

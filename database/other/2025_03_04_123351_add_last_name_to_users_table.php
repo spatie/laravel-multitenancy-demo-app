@@ -11,5 +11,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('last_name')->nullable();
         });
+
+        // php artisan tenants:artisan "migrate --database=tenant"
     }
 };

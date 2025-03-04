@@ -2,19 +2,19 @@
 
 namespace App\Jobs;
 
+use App\Models\User;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 use Spatie\Multitenancy\Models\Tenant;
 
-class TestJob implements ShouldQueue
+class ExampleJob implements ShouldQueue
 {
     use Queueable;
 
     public function handle(): void
     {
-        $tenant = Tenant::current();
+        ray("In job of " . Tenant::current()->name);
 
-        ray("Greetings from tenant {$tenant->name}");
-        ray("We are using tenant database " . config('database.connections.tenant.database'));
+        ray("First user:" . User::first()->email);
     }
 }

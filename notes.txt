@@ -1,3 +1,9 @@
+## fresh
+
 php artisan migrate:fresh --path=database/migrations/landlord --database=landlord --seed
 php artisan tenants:artisan "migrate:fresh --database=tenant --seed"
 
+## only migrations
+
+php artisan tenants:artisan "migrate --database=tenant"
+php artisan migrate --path=database/migrations/landlord --database=landlord

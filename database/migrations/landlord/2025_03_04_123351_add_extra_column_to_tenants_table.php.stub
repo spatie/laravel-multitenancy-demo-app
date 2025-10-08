@@ -13,3 +13,10 @@ return new class extends Migration
         });
     }
 };
+
+
+/*
+ * To run this migration, you can use the following command:
+ *
+ * php artisan migrate --path=database/migrations/landlord --database=landlord
+ */

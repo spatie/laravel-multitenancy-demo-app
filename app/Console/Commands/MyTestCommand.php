@@ -22,5 +22,23 @@ class MyTestCommand extends Command
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // command to run this for all tenants
 // a tenants:artisan "app:test"

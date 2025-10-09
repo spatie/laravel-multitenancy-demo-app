@@ -16,7 +16,6 @@ class MyTestCommand extends Command
 
         foreach (Tenant::all() as $tenant) {
             $tenant->makeCurrent();
-            ray("Tenant name: " . $tenant->name)->green();
             ray("First user: " . User::first()->email);
         }
     }
